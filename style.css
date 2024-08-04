@@ -7,25 +7,29 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 .container {
     display: flex;
-    max-width: 1200px;
+    flex-direction: column;
+    max-width: 100%;
     width: 100%;
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    margin: 20px;
 }
 
 .image-section {
-    flex: 1;
+    width: 100%;
     background: linear-gradient(135deg, #e09, #d0e);
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
 .image-section img {
@@ -36,10 +40,10 @@ body {
 }
 
 .text-section {
-    flex: 1;
-    padding: 40px;
+    padding: 20px;
     background-color: #333;
     color: #fff;
+    text-align: center;
 }
 
 h1 {
@@ -54,7 +58,7 @@ p {
 
 a {
     display: inline-block;
-    margin: 10px 0;
+    margin: 10px 5px;
     text-decoration: none;
     color: #333;
     background-color: #ffcc00;
@@ -66,4 +70,21 @@ a {
 a:hover {
     background-color: #333;
     color: #ffcc00;
+}
+
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        max-width: 1200px;
+    }
+
+    .text-section {
+        flex: 1;
+        padding: 40px;
+        text-align: left;
+    }
+
+    .image-section {
+        flex: 1;
+    }
 }
